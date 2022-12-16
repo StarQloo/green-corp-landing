@@ -9,6 +9,10 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
+	position: sticky;
+	background-color: #fff;
+	top: 0px;
+	z-index: 1;
  }
 
  .header__logo {
@@ -201,3 +205,79 @@ select {
 .footer__links a {
 	margin-bottom: 15px;
 }
+
+.about__sun-image {
+	animation: rotation 10s linear infinite;
+	position: absolute;
+}
+
+@keyframes rotation {
+	0%{
+	transform: rotate(0deg);
+	}
+	100%{
+	transform: rotate(360deg);
+	}
+}
+
+ @media (max-width: 720px) {
+	.header__logo {
+		height: 20px;
+	 }
+	 .about {
+		flex-direction: column-reverse;
+		padding: 50px 10px;
+	 }
+	 .form {
+		padding: 50px 10px;
+	}
+	.about h1 {
+		font-size: 36px;
+		line-height: 40px;
+	 }
+	 .form h2 {
+		font-size: 36px;
+	}
+	.about__image {
+		width: 280px;
+	 }
+	 .about__sun-image {
+		width: 75px;
+		height: 75px;
+	 }
+	 header {
+		padding: 10px;
+	 }
+
+	 footer {
+		padding: 0px 10px;
+	 }
+	 .footer__container {
+		flex-direction: column;
+  }
+ }
+ 
+ @media (max-width: 1024px) {
+		.about {
+		padding: 115px 20px;
+	 }
+	 .about h1 {
+		font-size: 36px;
+		line-height: 40px;
+	 }
+	 .about__image {
+		width: 280px;
+	 }
+	 .about__sun-image {
+		width: 75px;
+		height: 75px;
+	 }
+ }
+
+ .animate__animated.animate__fadeInLeft {
+	--animate-duration: 2s;
+ }
+
+ .animate__animated.animate__fadeInRight {
+	--animate-duration: 2s;
+ }
